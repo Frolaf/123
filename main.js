@@ -20,9 +20,6 @@ function modelLoaded(){
 function gotPoses(results){
     if(results.length > 0){
         console.log(results);
-        noseX = results[0].pose.nose.x;
-        noseY = results[0].pose.nose.y;
-        console.log("noseX = " + noseX + "noseY = " + noseY);
         left_wrist_x = results[0].pose.leftWrist.x;
         right_wrist_x = results[0].pose.rightWrist.x;
         difference = floor(left_wrist_x - right_wrist_x);
@@ -33,7 +30,6 @@ function gotPoses(results){
 function draw(){
     background("#969A97");
     fill("#F90093");
-    document.getElementById("square_side").innerHTML = "width and height of a square will be " + difference + " px"
-    stroke("#F90093");
-    square(noseX, noseY, difference);
+    document.getElementById("font_size").innerHTML = "font size of the text will be" + difference + " px";
+    text(noseX, noseY, difference);
 }
