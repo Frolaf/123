@@ -31,5 +31,6 @@ function draw(){
     background("#969A97");
     fill("#F90093");
     document.getElementById("font_size").innerHTML = "font size of the text will be" + difference + " px";
-    text(noseX, noseY, difference);
+    textSize(difference);
+    text("manishka",50, 400);
 }
